@@ -29,7 +29,6 @@ levels(FigS2a_data_plot_long$Species) <- gsub("_", " ", levels(FigS2a_data_plot_
 Species_color = (c("#440154","#481769","#472A7A","#433D84","#3D4E8A","#355E8D","#2E6D8E","#297B8E",
                    "#23898E","#1F978B","#21A585","#2EB37C","#46C06F","#65CB5E","#89D548","#B0DD2F","#D8E219","#FDE725"))
 
-
 ggplot(FigS2a_data_plot_long, aes(Plot, (Species))) +
   geom_tile(data =  subset(FigS2a_data_plot_long, Count != "NA"),aes(fill = Species), color = "white") + 
   scale_fill_manual(values = (Species_color)) +  
@@ -47,7 +46,6 @@ ggplot(FigS2a_data_plot_long, aes(Plot, (Species))) +
         axis.text.x = element_blank(),
         axis.text.y = element_text(color = "black", face = "italic", size = 11)) -> FigS2_partA; FigS2_partA
 
-
 ###
 FigS2b_data <- read.xlsx("Figure_S2.xlsx", sheet = "Frequency", rowNames = F, colNames = T)
 head(FigS2b_data)
@@ -58,7 +56,6 @@ Species_order <- FigS2b_data$Species_latin
 FigS2b_data$Species_latin <- factor(FigS2b_data$Species_latin,levels = Species_order)
 Species_color = (c("#440154","#481769","#472A7A","#433D84","#3D4E8A","#355E8D","#2E6D8E","#297B8E",
                    "#23898E","#1F978B","#21A585","#2EB37C","#46C06F","#65CB5E","#89D548","#B0DD2F","#D8E219","#FDE725"))
-
 
 plot_func <- function(data, y_var, title = "", xlab = "") {
   p <- ggplot(data, aes(x = "", y = .data[[y_var]], fill = Species_latin)) +
