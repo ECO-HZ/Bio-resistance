@@ -55,7 +55,6 @@ ggplot(summary_data, aes(x = Richness, y = Mean, shape = Origin)) +
          paste("(%, leaf area removed,  ", log[10](x+1), ")"))),
        tag = "(a)") -> Fig_4a; Fig_4a
 
-
 ################################## Fig 4b ######################################
 ## Loading data
 Fig4b_data <- read.xlsx("Figure_4.xlsx", sheet = "Figure_4b", colNames = TRUE, rowNames = FALSE)
@@ -83,7 +82,6 @@ ggplot(Fig4b_data, aes(x = Richness, y = Soil_effect, fill = Origin, shape = Ori
        y = "Soil effect on total biomass\n[ln (non-sterilized/sterilized)]",
        tag = "(b)") -> Fig_4b; Fig_4b
   
-
 ################################## Fig 4c ######################################
 ## Loading data
 Fig4c_data <- read.xlsx("Figure_4.xlsx", sheet = "Figure_4c", colNames = TRUE, rowNames = FALSE)
@@ -101,7 +99,6 @@ ggplot(Fig4c_data, aes(x = log10(AP_re_abun*100), y = Soil_effect)) +
        y = "Soil effect on total biomass\n[ln (non-sterilized/sterilized)]", 
        tag = "(c)") -> Fig_4c; Fig_4c
   
-
 ################################## Fig 4d ######################################
 ## Loading data
 Fig4d_data <- read.xlsx("Figure_4.xlsx", sheet = "Figure_4d", colNames = TRUE, rowNames = FALSE)
@@ -136,10 +133,8 @@ ggplot(Fig4d_data, aes(y = log10(Native_biomass), x = Richness, fill = Time)) +
        y = expression(paste("Native plant biomass (g,  ", log[scriptstyle(10)], ")")),
        tag = "(d)") -> Fig_4d; Fig_4d
 
-
 ## Combined 
 (Fig_4a/Fig_4c)|(Fig_4b/Fig_4d) -> Fig_4; Fig_4
 
 ### Notice that,
 ### For more picture details, we have further adjusted it in Adobe illustrator.
-
