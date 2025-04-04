@@ -26,7 +26,6 @@ print(anova_Abun_AP_field[,-c(1,2)])
 paste0("SD = ",round(data.frame(VarCorr(Abun_AP_mod_field))[1,5], 3))
 paste0("LRT = ",round(ranova(Abun_AP_mod_field)[2,4], 2), ", p = ", round(ranova(Abun_AP_mod_field)[2,6], 3))
 
-
 ############################## Field experiment ################################
 #################  Aboveground biomass of A. philoxeroides #####################
 Bio_AP_field <- read.xlsx("Table_S6.xlsx", sheet = "Field_AP_Native_biomass", rowNames = FALSE, colNames = TRUE)
@@ -46,7 +45,6 @@ print(anova_Bio_AP_field[,-c(1,2)])
 ## SD & LRT for random factor
 paste0("SD = ",round(data.frame(VarCorr(Bio_AP_mod_field))[1,5], 3))
 paste0("LRT = ",round(ranova(Bio_AP_mod_field)[2,4], 2), ", p = ", round(ranova(Bio_AP_mod_field)[2,6], 3))
-
 
 ############################## Field experiment ################################
 ####################  Aboveground biomass of native species ####################
@@ -68,8 +66,6 @@ print(anova_Bio_Nat_field[,-c(1,2)])
 paste0("SD = ",round(data.frame(VarCorr(Bio_Native_mod_field))[1,5], 3))
 paste0("LRT = ",round(ranova(Bio_Native_mod_field)[2,4], 2), ", p = ", round(ranova(Bio_Native_mod_field)[2,6], 3))
 
-
-
 ############################# Mesocosm experiment ##############################
 #################  Relative abundance of A. philoxeroides ######################
 Abun_AP_meso <- read.xlsx("Table_S6.xlsx", sheet = "Mesocosm_AP_re_abun", rowNames = FALSE, colNames = TRUE)
@@ -89,7 +85,6 @@ print(anova_Abun_AP_meso[,-c(1,2)])
 ## SD & LRT for random factor
 paste0("SD = ",round(data.frame(VarCorr(Abun_AP_mod_meso))[1,5], 3))
 paste0("LRT = ",round(ranova(Abun_AP_mod_meso)[2,4], 2), ", p = ", round(ranova(Abun_AP_mod_meso)[2,6], 3))
-
 
 ############################# Mesocosm experiment ##############################
 #################  Aboveground biomass of A. philoxeroides #####################
@@ -111,7 +106,6 @@ print(anova_Bio_AP_meso[,-c(1,2)])
 paste0("SD = ",round(data.frame(VarCorr(Bio_AP_mod_meso))[1,5], 3))
 paste0("LRT = ",round(ranova(Bio_AP_mod_meso)[2,4], 2), ", p = ", round(ranova(Bio_AP_mod_meso)[2,6], 3))
 
-
 ############################# Mesocosm experiment ##############################
 ####################  Aboveground biomass of native species ####################
 Bio_Native_meso <- read.xlsx("Table_S6.xlsx", sheet = "Mesocosm_native_biomass", rowNames = FALSE, colNames = TRUE)
@@ -131,4 +125,3 @@ print(anova_Bio_Nat_meso[,-c(1,2)])
 ## SD & LRT for random factor
 paste0("SD = ",round(data.frame(VarCorr(Bio_Native_mod_meso))[1,5], 3))
 paste0("LRT = ",round(ranova(Bio_Native_mod_meso)[2,4], 2), ", p = ", round(ranova(Bio_Native_mod_meso)[2,6], 3))
-
