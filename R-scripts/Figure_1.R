@@ -66,7 +66,7 @@ library(lavaan) # version 0.6-19
 library(AICcmodavg) # version 2.3-4
 
 ## load database
-data1 = read.xlsx("Figure_1.xlsx", sheet = "Field_survey", rowNames = T, colNames = T)
+data1 = read.xlsx("Figure_1.xlsx", sheet = "Field_survey", rowNames = TRUE, colNames = TRUE)
 SEM_data = subset(data1, Herb_rich != "NA" & Path_re_abun != "NA") 
 dim(SEM_data)
 SEM_data$Type = ifelse(SEM_data$Type == "Natural", 0, 1)
@@ -86,9 +86,9 @@ Native_rich ~ b14*Ann_M_Tem
 Path_re_abun ~~ Herb_rich
 "
 
-fit_model_0 <-sem(model_0, data=SEM_data)
+fit_model_0 <- sem(model_0, data = SEM_data)
 show(fit_model_0 )
-summary(fit_model_0, standardized =TRUE, rsq=TRUE)
+summary(fit_model_0, standardized = TRUE, rsq = TRUE)
 # Finding the missing path
 mi0<-modindices(fit_model_0);print(mi0[mi0$mi>3.0,])
 
@@ -102,7 +102,7 @@ Path_re_abun ~~ Herb_rich
 b9 == 0
 "
 
-fit_model_1 <-sem(model_1, data=SEM_data)
+fit_model_1 <- sem(model_1, data = SEM_data)
 show(fit_model_1 )
 summary(fit_model_1, standardized = TRUE, rsq = TRUE)
 
@@ -118,9 +118,9 @@ b9 == 0
 b5 == 0
 "
 
-fit_model_2 <-sem(model_2, data=SEM_data)
+fit_model_2 <- sem(model_2, data = SEM_data)
 show(fit_model_2)
-summary(fit_model_2, standardized =TRUE, rsq=TRUE)
+summary(fit_model_2, standardized = TRUE, rsq = TRUE)
 
 fitMeasures(fit_model_0, c("chisq", "df", "pvalue", "cfi", "rmsea", "aic"))
 fitMeasures(fit_model_1, c("chisq", "df", "pvalue", "cfi", "rmsea", "aic"))
@@ -129,4 +129,3 @@ aictab(list(fit_model_0, fit_model_1, fit_model_2), c("mod0", "mod1", "mod2"))
 
 # No need for model selection as only fit_model_2 was a good fit 
 ### We used PowerPoint to plot the results of the structural equation model.
-
