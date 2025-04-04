@@ -45,7 +45,6 @@ print(anova_Herb_rich_mod[,-c(1,2)])
 paste0("SD = ",round(data.frame(VarCorr(Herb_rich_mod))[1,5], 3))
 paste0("LRT = ",round(ranova(Herb_rich_mod)[2,4], 2), ", p = ", round(ranova(Herb_rich_mod)[2,6], 3))
 
-
 ############################## Field experiment ################################
 ############################ Herbivore abundance ###############################
 Herb_abun_mod <- lmer(Herbivore_abundance ~ Richness*Time + (1|plot), Herbivore_data)
@@ -62,4 +61,3 @@ print(anova_Herb_abun_mod[,-c(1,2)])
 ## SD & LRT for random factor
 paste0("SD = ",round(data.frame(VarCorr(Herb_abun_mod))[1,5], 3))
 paste0("LRT = ",round(ranova(Herb_abun_mod)[2,4], 2), ", p = ", round(ranova(Herb_abun_mod)[2,6], 3))
-
