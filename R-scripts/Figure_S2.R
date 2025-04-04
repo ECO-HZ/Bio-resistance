@@ -64,10 +64,10 @@ plot_func <- function(data, y_var, title = "", xlab = "") {
   p <- ggplot(data, aes(x = "", y = .data[[y_var]], fill = Species_latin)) +
     geom_bar(stat = "identity", width = 1) +
     scale_fill_manual(values = (Species_color)) +  
-    coord_polar("y", start = 0, clip = "off") +
     geom_text(aes(label = .data[[y_var]]), 
               position = position_stack(vjust = 0.5), size = 3.5, color = "white") +
     labs(title = title, x = xlab) +     
+    coord_polar("y", start = 0, clip = "off") +
     theme_void() +
     theme(axis.title.y = element_text(size = 12, angle = 90, vjust = 0.5),
           legend.position = "none",
