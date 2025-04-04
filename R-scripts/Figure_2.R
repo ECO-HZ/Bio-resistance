@@ -89,7 +89,6 @@ ggplot(Fig2a_data, aes(x = Native_rich, y = log10(AP_re_abun*100))) +
                            paste("relative abundance (%,  ", log[scriptstyle(10)], ")"))),
        tag = "(a)") -> Fig_2a; Fig_2a
 
-
 ################################## Fig 2b ######################################
 ## Loading data
 Fig2a_data <- read.xlsx("Figure_2&Table_S4&Table_S5&Table_AP_def&Her_rich&path.xlsx", sheet = "Field_survey", colNames = TRUE, rowNames = FALSE)
@@ -139,7 +138,6 @@ ggplot()+
                            paste("relative abundance (%,  ", log[scriptstyle(10)], ")"))),
        tag = "(b)") -> Fig_2b; Fig_2b
 
-
 ################################## Fig 2c ######################################
 ## Loading data
 Fig2_data <- read.xlsx("Figure_2&Table_S4&Table_S5&Table_AP_def&Her_rich&path.xlsx", sheet = "Field_survey", colNames = TRUE, rowNames = FALSE)
@@ -162,7 +160,6 @@ Fig_2c <- ggplot(Fig2_data, aes(x = Native_rich, y = log10(Path_re_abun*100))) +
                            paste("relative abundance (%,  ", log[scriptstyle(10)], ")"))),
        tag = "(c)") -> Fig_2c; Fig_2c
 
-
 ################################## Fig 2d ######################################
 ## Loading data
 Fig2_data <- read.xlsx("Figure_2&Table_S4&Table_S5&Table_AP_def&Her_rich&path.xlsx", sheet = "Field_survey", colNames = TRUE, rowNames = FALSE)
@@ -184,7 +181,6 @@ ggplot(Fig2_data, aes(x = Native_rich, y = log(Defoliation*100+1), fill = Year))
          paste("Defoliation on ", italic("A. philoxeroides")),
          paste("(% leaf area removed, ",log[10](x+1), ")"))),
        tag = "(d)") -> Fig_2d; Fig_2d
-
 
 ## Combined
 (Fig_2a|Fig_2b)/(Fig_2c|Fig_2d) -> Fig_2; Fig_2
