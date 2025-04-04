@@ -133,7 +133,7 @@ Variable list:
     Variable list:
     * Columns 1-18: Latin name of the 18 native species 
     * Native_richness: 5 native species richness level
-    * Plot: Code of plot in field and mesocosm experiment
+    * plot: Code of plot in field and mesocosm experiment
 
     Sheets: Frequency - Frequency of occurrence of experimental species
     Variable list:
