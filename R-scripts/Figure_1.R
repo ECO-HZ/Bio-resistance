@@ -10,10 +10,10 @@ library(cowplot)  # version 1.1.3
 ################################## Fig 1a ######################################
 Fig1_Map <- read.xlsx("Figure_1.xlsx", sheet = "Field_survey", colNames = TRUE, rowNames = FALSE)
 china_map <- read_sf("China_map.json")
-Asia_map <- read_sf("custom.geo.json")
-class(Asia_map)
-ggplot(data = Asia_map) +    
-  geom_sf(data = Asia_map[Asia_map$subregion %in% "Eastern Asia", ], color = "black", linewidth = 0.5, fill = NA) + 
+custom_map <- read_sf("custom.geo.json")
+class(custom_map)
+ggplot(data = custom_map) +    
+  geom_sf(data = custom_map[custom_map$subregion %in% "Eastern Asia", ], color = "black", linewidth = 0.5, fill = NA) + 
   geom_sf(data = china_map, color = "black", linewidth = 0.5, fill = NA) +
   geom_sf(data = china_map[c(3,12,10,14,15:20),], color = "black", linewidth = 0.5, fill = "grey92") +
   theme_bw() +      
@@ -44,7 +44,7 @@ ggplot() +
   scale_fill_manual(values = c("#26B8E9","#35B676",'#FFB636','#5C66A9'))+
   scale_x_continuous(limits = c(105,120),breaks = c(105,110,115,120)) + 
   scale_y_continuous(limits = c(20,40),breaks = c(20,25,30,35,40)) + 
-  annotation_scale(location = "bl", style = "ticks",line_width = 0.1,pad_y = unit(0.5, "cm"),text_cex = 0.9) +
+  annotation_scale(location = "bl", style = "ticks",line_width = 1.5,pad_y = unit(0.5, "cm"),text_cex = 1.2) +
   theme(text = element_text(size = 11),
         legend.position = c(0.83,0.10),
         panel.grid = element_blank(), 
@@ -129,3 +129,4 @@ aictab(list(fit_model_0, fit_model_1, fit_model_2), c("mod0", "mod1", "mod2"))
 
 # No need for model selection as only fit_model_2 was a good fit 
 ### We used PowerPoint to plot the results of the structural equation model.
+
