@@ -29,6 +29,3 @@ ggplot(Figure_S5, aes(x = Richness, y = log10(Native_biomass), fill = Time)) +
         legend.position = c(0.8,0.2)) + 
   labs(x = "Native plant richness \n(Number of species added)", 
        y = expression(paste("Native plant biomass (g,  ", log[scriptstyle(10)], ")"))) -> Fig_S5; Fig_S5
-
-
-  
