@@ -20,8 +20,8 @@ The names of R-scripts correspond to the statistical analysis and visualization 
 
 *List of R-scripts*
 
-    * 1. Figure_1.R  * 2 Figure_2.R  * 3 Figure_3.R  * 4 Figure_4.R  * 5 Figure_S2.R  * 6 Figure_S4.xlsx  
-    * 7. Figure_S5.R  * 8 Table_S4.R  * 9 Table_S5.R  * 10 Table_S6.R  * 11 Table_S7.R 
+    * 1. Figure_1.R  * 2. Figure_2.R  * 3. Figure_3.R  * 4. Figure_4.R  * 5. Figure_S2.R  * 6. Figure_S4.xlsx  
+    * 7. Figure_S5.R  * 8. Table_S4.R  * 9. Table_S5.R  * 10. Table_S6.R  * 11. Table_S7.R 
     
 **Data-specific onformation for:** ***Figure_1.xlsx***
 
