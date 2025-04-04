@@ -22,7 +22,6 @@ anova_Defoliation[, 2:4] <- round(anova_Defoliation[, 2:4], digits = 2)
 anova_Defoliation$`Pr(>F)` <- round(anova_Defoliation$`Pr(>F)`, 5)
 print(anova_Defoliation[,-c(2,3)]) 
 
-
 ######################### Insect herbivore richness ############################
 Herbivore_data = subset(Table_S5, Herb_rich != "NA" & Path_re_abun != "NA")
 Herbivore_data$Path_re_abun = log10(Herbivore_data$Path_re_abun*100) 
@@ -60,7 +59,6 @@ print(anova_Herbivore[,-c(2,3)])
 ## R² & AIC
 print(paste0("R²: ", round(summary(Herbivore_mod)$r.squared, 3)))
 print(paste0("AIC: ", round(AIC(Herbivore_mod), 3)))
-
 
 ################### Relative abundance of soil pathogens #######################
 Pathogens_data = subset(Table_S5, Herb_rich != "NA" & Path_re_abun != "NA")
