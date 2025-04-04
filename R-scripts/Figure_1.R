@@ -28,7 +28,6 @@ ggplot(data = custom_map) +
         panel.background = element_rect(fill = NA, color = NA))+
   annotate("text", x = 85, y = 10, label = "East Asia", size = 4, color = "black") -> p1; p1
 
-
 province_labels <- data.frame(  
   name = c("Hebei", "Shandong", "Anhui", "Henan", "Hubei", "Jiangsu", "Jiangxi", "Hunan", "Guangdong", "Guangxi"),  
   Longitude = c(115, 117, 118, 112, 112, 119.2, 116, 111, 115.5, 108),  
@@ -59,7 +58,6 @@ ggplot() +
 ggdraw() + draw_plot(p2) +
   draw_plot(p1, x = 0.245, y = 0.68, width = 0.30, height = 0.35) -> Fig_1a; Fig_1a
 
- 
 ################################## Fig_1b ######################################
 ## Prior Model (more details please see Fig. S3 in the supporting information)
 library(lavaan) # version 0.6-19
@@ -105,7 +103,6 @@ b9 == 0
 fit_model_1 <- sem(model_1, data = SEM_data)
 show(fit_model_1 )
 summary(fit_model_1, standardized = TRUE, rsq = TRUE)
-
 
 ### deleted the path "AP_re_abun ~ Path_re_abun"
 model_2 =  "
