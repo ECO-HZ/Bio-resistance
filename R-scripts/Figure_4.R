@@ -10,6 +10,7 @@ library(lmerTest) # version 3.1-3
 library(emmeans) # version 1.10.6
 library(patchwork) # version 1.2.0
 
+## Define visualization style
 color_select <- c("October 2021" = '#1CB3B0', "October 2022" = "#C693BE", "October 2023" = '#1072BD')
 
 mytheme <- theme_bw() + 
@@ -22,7 +23,6 @@ mytheme <- theme_bw() +
         legend.text= element_text(size=10),
         legend.background = element_blank(),
         plot.tag = element_text(size = 14, face = "bold")) 
-
 
 ################################## Fig 4a ######################################
 ## Loading data
