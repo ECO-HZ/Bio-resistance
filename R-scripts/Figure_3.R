@@ -105,6 +105,7 @@ Fig3c_data$Time <- factor(Fig3c_data$Time, levels = sample_order)
 mod_AP_re_abun <- lmer(log10(AP_re_abun*100)~ Richness*Time + (1|plot), data=Fig3c_data)
 anova(mod_AP_re_abun)
 emt_AP_re_abun <- emtrends(mod_AP_re_abun, pairwise ~ Time, var = "Richness")
+test(emt_AP_re_abun, adjust = "BH")
 slope_letter <- multcomp::cld(emt_AP_re_abun, alpha = 0.05, Letters = letters, adjust = "BH", decreasing = T)
 print(slope_letter)
 
@@ -135,6 +136,7 @@ Fig3d_data$Time <- factor(Fig3d_data$Time, levels = sample_order)
 mod_AP_bio <- lmer(log10(AP_biomass) ~ Richness * Time + (1|plot), data = Fig3d_data)
 anova(mod_AP_bio)
 emt_AP_bio <- emtrends(mod_AP_bio, pairwise ~ Time, var = "Richness")
+test(emt_AP_bio, adjust = "BH")
 slope_letter <- multcomp::cld(emt_AP_bio, alpha = 0.05, Letters = letters, adjust = "BH", decreasing = T)
 print(slope_letter)
 
@@ -173,3 +175,4 @@ print(Fig_3)
 
 ### Notice that,
 ### For more picture details, we have further adjusted it in Adobe illustrator.
+
